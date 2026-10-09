@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #111418;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.traffic-light{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 210px;
+    height: 600px;
+    border-radius: 28px;
+    background: linear-gradient(110deg, #303743, #1e242d 40%, #252c36);
+}
+
+.light-box{
+    width: 180px;
+    height: 180px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slot-red{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+    0 0 5px red,
+    0 0 10px red,
+    0 0 15px red,
+    0 0 10px rgba(255, 0, 0, 1);
+    background: rgba(100, 0, 0, 0.25);
+}
+.slot-yellow{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+    0 0 5px yellow,
+    0 0 10px yellow,
+    0 0 15px yellow,
+    0 0 10px rgba(255, 255, 0, 1);
+    background: rgba(199, 219, 46, 0.25);
+}
+.slot-green{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+    0 0 5px aqua,
+    0 0 10px aqua,
+    0 0 15px aqua,
+    0 0 10px rgba(0, 255, 255, 1);
+    background: rgba(34, 207, 237, 0.25);
+}
+
+.hun{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    z-index: 2;
+    mask: url("./human-clean.png") center / contain no-repeat;
+}
+
+.hun-yellow{
+    background-color: yellow;
+    position: absolute;
+    animation: huny 3s linear infinite;
+}
+
+.hun-green{
+    background-color: aqua;
+    position: absolute;
+    animation: hung 3s linear infinite;
+
+}
+
+.hun-red{
+    position: absolute;
+    animation: hunr 3s linear infinite;
+}
+
+@keyframes hunr{
+    0%{
+        top: 40px;
+    }
+    25%{
+        top: 240px;
+    }
+    50%{
+        top: 440px;
+    }
+    75%{
+        top: 240px;
+    }
+    100%{
+        top: 40px;
+    }
+}
+
+@keyframes huny{
+    0%{
+        top: -160px;
+    }
+    25%{
+        top: 40px;
+    }
+    50%{
+        top: 240px;
+    }
+    75%{
+        top: 40px;
+    }
+    100%{
+        top: -160px;
+    }
+}
+
+@keyframes hung{
+    0%{
+        top: -360px;
+    }
+    25%{
+        top: -160px;
+    }
+    50%{
+        top: 40px;
+    }
+    75%{
+        top: -160px;
+    }
+    100%{
+        top: -360px;
+    }
+}
